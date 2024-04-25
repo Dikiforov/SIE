@@ -28,37 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PanelInfoEmpresa = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.IDPersona = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.cCheck1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.IDCoche = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cVin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.VerColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.EditarColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.EliminarColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.cCheck = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.IDPersona = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VerColumn = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.EditarColumn = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.EliminarColumn = new System.Windows.Forms.DataGridViewButtonColumn();
             this.PanelInfoEmpresa.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -77,14 +81,16 @@
             this.PanelInfoEmpresa.Controls.Add(this.label2);
             this.PanelInfoEmpresa.Controls.Add(this.panel1);
             this.PanelInfoEmpresa.Controls.Add(this.label1);
-            this.PanelInfoEmpresa.Location = new System.Drawing.Point(1, 0);
+            this.PanelInfoEmpresa.Location = new System.Drawing.Point(1, 1);
             this.PanelInfoEmpresa.Name = "PanelInfoEmpresa";
             this.PanelInfoEmpresa.Size = new System.Drawing.Size(1800, 1081);
             this.PanelInfoEmpresa.TabIndex = 0;
+            this.PanelInfoEmpresa.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelInfoEmpresa_Paint);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.dataGridView2);
@@ -94,9 +100,29 @@
             this.panel2.Size = new System.Drawing.Size(631, 639);
             this.panel2.TabIndex = 2;
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(419, 61);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 3;
+            this.button5.Text = "Listar todos";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(3, 15);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(96, 23);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "Relacionar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(500, 37);
+            this.button2.Location = new System.Drawing.Point(500, 61);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(117, 23);
             this.button2.TabIndex = 6;
@@ -118,18 +144,20 @@
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cCheck1,
             this.IDCoche,
             this.cMarca,
             this.cModelo,
             this.cVin,
-            this.Column13,
-            this.Column10,
-            this.Column11});
+            this.VerColumn1,
+            this.EditarColumn1,
+            this.EliminarColumn1});
             this.dataGridView2.Cursor = System.Windows.Forms.Cursors.Default;
             this.dataGridView2.GridColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView2.Location = new System.Drawing.Point(15, 90);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.ShowEditingIcon = false;
             this.dataGridView2.ShowRowErrors = false;
             this.dataGridView2.Size = new System.Drawing.Size(602, 496);
@@ -162,6 +190,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.label3);
@@ -169,6 +198,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(683, 639);
             this.panel1.TabIndex = 1;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(142, 61);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "Listar todos";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button1
             // 
@@ -194,23 +233,26 @@
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cCheck,
             this.IDPersona,
             this.cNombre,
             this.cApellido,
-            this.Column12,
-            this.Column4,
-            this.Column5});
+            this.VerColumn,
+            this.EditarColumn,
+            this.EliminarColumn});
+            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView1.Location = new System.Drawing.Point(13, 90);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView1.ShowEditingIcon = false;
             this.dataGridView1.ShowRowErrors = false;
             this.dataGridView1.Size = new System.Drawing.Size(651, 496);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // label3
             // 
@@ -235,75 +277,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "SISTEMAS INTEGRADOS ELECTRONEUMÁTICOS";
             // 
-            // button3
+            // cCheck1
             // 
-            this.button3.Location = new System.Drawing.Point(3, 15);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(96, 23);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Relacionar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // IDPersona
-            // 
-            this.IDPersona.DataPropertyName = "ID";
-            this.IDPersona.HeaderText = "#";
-            this.IDPersona.Name = "IDPersona";
-            this.IDPersona.ReadOnly = true;
-            // 
-            // cNombre
-            // 
-            this.cNombre.DataPropertyName = "NOMBRE";
-            this.cNombre.HeaderText = "Nombre";
-            this.cNombre.Name = "cNombre";
-            this.cNombre.ReadOnly = true;
-            // 
-            // cApellido
-            // 
-            this.cApellido.DataPropertyName = "APELLIDO";
-            this.cApellido.HeaderText = "Apellido";
-            this.cApellido.Name = "cApellido";
-            this.cApellido.ReadOnly = true;
-            // 
-            // Column12
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Column12.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Column12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Column12.HeaderText = "";
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            this.Column12.Text = "Ver";
-            this.Column12.UseColumnTextForButtonValue = true;
-            // 
-            // Column4
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Column4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Column4.HeaderText = "";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Text = "Editar";
-            this.Column4.UseColumnTextForButtonValue = true;
-            // 
-            // Column5
-            // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.Column5.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Column5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Column5.HeaderText = "";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Text = "Eliminar";
-            this.Column5.UseColumnTextForButtonValue = true;
+            this.cCheck1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cCheck1.HeaderText = "";
+            this.cCheck1.Name = "cCheck1";
+            this.cCheck1.ReadOnly = true;
             // 
             // IDCoche
             // 
@@ -333,44 +312,111 @@
             this.cVin.Name = "cVin";
             this.cVin.ReadOnly = true;
             // 
-            // Column13
+            // VerColumn1
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Column13.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Column13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Column13.HeaderText = "";
-            this.Column13.Name = "Column13";
-            this.Column13.ReadOnly = true;
-            this.Column13.Text = "Ver";
-            this.Column13.UseColumnTextForButtonValue = true;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.VerColumn1.DefaultCellStyle = dataGridViewCellStyle7;
+            this.VerColumn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.VerColumn1.HeaderText = "";
+            this.VerColumn1.Name = "VerColumn1";
+            this.VerColumn1.ReadOnly = true;
+            this.VerColumn1.Text = "Ver";
+            this.VerColumn1.UseColumnTextForButtonValue = true;
             // 
-            // Column10
+            // EditarColumn1
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Column10.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Column10.HeaderText = "";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            this.Column10.Text = "Editar";
-            this.Column10.UseColumnTextForButtonValue = true;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.EditarColumn1.DefaultCellStyle = dataGridViewCellStyle8;
+            this.EditarColumn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditarColumn1.HeaderText = "";
+            this.EditarColumn1.Name = "EditarColumn1";
+            this.EditarColumn1.ReadOnly = true;
+            this.EditarColumn1.Text = "Editar";
+            this.EditarColumn1.UseColumnTextForButtonValue = true;
             // 
-            // Column11
+            // EliminarColumn1
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.Column11.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Column11.HeaderText = "";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            this.Column11.Text = "Eliminar";
-            this.Column11.UseColumnTextForButtonValue = true;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.EliminarColumn1.DefaultCellStyle = dataGridViewCellStyle9;
+            this.EliminarColumn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EliminarColumn1.HeaderText = "";
+            this.EliminarColumn1.Name = "EliminarColumn1";
+            this.EliminarColumn1.ReadOnly = true;
+            this.EliminarColumn1.Text = "Eliminar";
+            this.EliminarColumn1.UseColumnTextForButtonValue = true;
+            // 
+            // cCheck
+            // 
+            this.cCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cCheck.HeaderText = "";
+            this.cCheck.Name = "cCheck";
+            this.cCheck.ReadOnly = true;
+            // 
+            // IDPersona
+            // 
+            this.IDPersona.DataPropertyName = "ID";
+            this.IDPersona.HeaderText = "#";
+            this.IDPersona.Name = "IDPersona";
+            this.IDPersona.ReadOnly = true;
+            // 
+            // cNombre
+            // 
+            this.cNombre.DataPropertyName = "NOMBRE";
+            this.cNombre.HeaderText = "Nombre";
+            this.cNombre.Name = "cNombre";
+            this.cNombre.ReadOnly = true;
+            // 
+            // cApellido
+            // 
+            this.cApellido.DataPropertyName = "APELLIDO";
+            this.cApellido.HeaderText = "Apellido";
+            this.cApellido.Name = "cApellido";
+            this.cApellido.ReadOnly = true;
+            // 
+            // VerColumn
+            // 
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.VerColumn.DefaultCellStyle = dataGridViewCellStyle10;
+            this.VerColumn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.VerColumn.HeaderText = "";
+            this.VerColumn.Name = "VerColumn";
+            this.VerColumn.ReadOnly = true;
+            this.VerColumn.Text = "Ver";
+            this.VerColumn.UseColumnTextForButtonValue = true;
+            // 
+            // EditarColumn
+            // 
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.EditarColumn.DefaultCellStyle = dataGridViewCellStyle11;
+            this.EditarColumn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditarColumn.HeaderText = "";
+            this.EditarColumn.Name = "EditarColumn";
+            this.EditarColumn.ReadOnly = true;
+            this.EditarColumn.Text = "Editar";
+            this.EditarColumn.UseColumnTextForButtonValue = true;
+            // 
+            // EliminarColumn
+            // 
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.EliminarColumn.DefaultCellStyle = dataGridViewCellStyle12;
+            this.EliminarColumn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EliminarColumn.HeaderText = "";
+            this.EliminarColumn.Name = "EliminarColumn";
+            this.EliminarColumn.ReadOnly = true;
+            this.EliminarColumn.Text = "Eliminar";
+            this.EliminarColumn.UseColumnTextForButtonValue = true;
             // 
             // FormPruebaSIE
             // 
@@ -408,19 +454,23 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn cCheck1;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDCoche;
         private System.Windows.Forms.DataGridViewTextBoxColumn cMarca;
         private System.Windows.Forms.DataGridViewTextBoxColumn cModelo;
         private System.Windows.Forms.DataGridViewTextBoxColumn cVin;
-        private System.Windows.Forms.DataGridViewButtonColumn Column13;
-        private System.Windows.Forms.DataGridViewButtonColumn Column10;
-        private System.Windows.Forms.DataGridViewButtonColumn Column11;
+        private System.Windows.Forms.DataGridViewButtonColumn VerColumn1;
+        private System.Windows.Forms.DataGridViewButtonColumn EditarColumn1;
+        private System.Windows.Forms.DataGridViewButtonColumn EliminarColumn1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn cCheck;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDPersona;
         private System.Windows.Forms.DataGridViewTextBoxColumn cNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn cApellido;
-        private System.Windows.Forms.DataGridViewButtonColumn Column12;
-        private System.Windows.Forms.DataGridViewButtonColumn Column4;
-        private System.Windows.Forms.DataGridViewButtonColumn Column5;
+        private System.Windows.Forms.DataGridViewButtonColumn VerColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn EditarColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn EliminarColumn;
     }
 }
 

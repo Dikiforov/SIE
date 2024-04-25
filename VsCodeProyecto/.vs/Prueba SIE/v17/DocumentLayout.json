@@ -1,0 +1,120 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\dgall\\Desktop\\SIE\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F398BB87-0CB7-405B-9D04-0EB7956FA81A}|Prueba SIE.csproj|c:\\users\\dgall\\desktop\\sie\\formcoches.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F398BB87-0CB7-405B-9D04-0EB7956FA81A}|Prueba SIE.csproj|solutionrelative:formcoches.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F398BB87-0CB7-405B-9D04-0EB7956FA81A}|Prueba SIE.csproj|c:\\users\\dgall\\desktop\\sie\\formpersonas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F398BB87-0CB7-405B-9D04-0EB7956FA81A}|Prueba SIE.csproj|solutionrelative:formpersonas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F398BB87-0CB7-405B-9D04-0EB7956FA81A}|Prueba SIE.csproj|C:\\Users\\dgall\\Desktop\\SIE\\formpruebasie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F398BB87-0CB7-405B-9D04-0EB7956FA81A}|Prueba SIE.csproj|solutionrelative:formpruebasie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F398BB87-0CB7-405B-9D04-0EB7956FA81A}|Prueba SIE.csproj|c:\\users\\dgall\\desktop\\sie\\dbfunciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F398BB87-0CB7-405B-9D04-0EB7956FA81A}|Prueba SIE.csproj|solutionrelative:dbfunciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F398BB87-0CB7-405B-9D04-0EB7956FA81A}|Prueba SIE.csproj|c:\\users\\dgall\\desktop\\sie\\formpruebasie.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F398BB87-0CB7-405B-9D04-0EB7956FA81A}|Prueba SIE.csproj|solutionrelative:formpruebasie.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F398BB87-0CB7-405B-9D04-0EB7956FA81A}|Prueba SIE.csproj|C:\\Users\\dgall\\Desktop\\SIE\\formcoches.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F398BB87-0CB7-405B-9D04-0EB7956FA81A}|Prueba SIE.csproj|solutionrelative:formcoches.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 274,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DbFunciones.cs",
+              "DocumentMoniker": "C:\\Users\\dgall\\Desktop\\SIE\\DbFunciones.cs",
+              "RelativeDocumentMoniker": "DbFunciones.cs",
+              "ToolTip": "C:\\Users\\dgall\\Desktop\\SIE\\DbFunciones.cs",
+              "RelativeToolTip": "DbFunciones.cs",
+              "ViewState": "AQIAAGsBAAAAAAAAAAAmwJEBAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T20:25:51.946Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormPersonas.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\dgall\\Desktop\\SIE\\FormPersonas.cs",
+              "RelativeDocumentMoniker": "FormPersonas.cs",
+              "ToolTip": "C:\\Users\\dgall\\Desktop\\SIE\\FormPersonas.cs [Dise\u00F1o]",
+              "RelativeToolTip": "FormPersonas.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T21:21:29.912Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormCoches.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\dgall\\Desktop\\SIE\\FormCoches.cs",
+              "RelativeDocumentMoniker": "FormCoches.cs",
+              "ToolTip": "C:\\Users\\dgall\\Desktop\\SIE\\FormCoches.cs [Dise\u00F1o]",
+              "RelativeToolTip": "FormCoches.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T21:21:09.507Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormPruebaSIE.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\dgall\\Desktop\\SIE\\FormPruebaSIE.Designer.cs",
+              "RelativeDocumentMoniker": "FormPruebaSIE.Designer.cs",
+              "ToolTip": "C:\\Users\\dgall\\Desktop\\SIE\\FormPruebaSIE.Designer.cs",
+              "RelativeToolTip": "FormPruebaSIE.Designer.cs",
+              "ViewState": "AQIAAPIAAAAAAAAAAAAQwP0AAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T20:33:18.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormPruebaSIE.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\dgall\\Desktop\\SIE\\FormPruebaSIE.cs",
+              "RelativeDocumentMoniker": "FormPruebaSIE.cs",
+              "ToolTip": "C:\\Users\\dgall\\Desktop\\SIE\\FormPruebaSIE.cs [Dise\u00F1o]",
+              "RelativeToolTip": "FormPruebaSIE.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T20:20:33.307Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormCoches.cs",
+              "DocumentMoniker": "C:\\Users\\dgall\\Desktop\\SIE\\FormCoches.cs",
+              "RelativeDocumentMoniker": "FormCoches.cs",
+              "ToolTip": "C:\\Users\\dgall\\Desktop\\SIE\\FormCoches.cs",
+              "RelativeToolTip": "FormCoches.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAgwCIAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T15:38:06.344Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

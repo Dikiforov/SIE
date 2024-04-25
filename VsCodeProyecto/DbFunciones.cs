@@ -268,6 +268,13 @@ namespace Prueba_SIE
 
         public static void addRelationShip(int id_coche, int id_persona)
         {
+            // Verificar si ya existe una relación con los mismos valores de id_persona e id_coche
+            if (RelationShipExists(id_coche, id_persona))
+            {
+                MessageBox.Show("Ya existe una relación previa con los mismos valores de ID de coche y persona.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             // Insertar la relación en la tabla PERSONA_COCHE
             string sqlQuery = "INSERT INTO PERSONA_COCHE VALUES (@ID_PERSONA, @ID_COCHE)";
             SqlConnection conn = GetConnection();
@@ -289,8 +296,34 @@ namespace Prueba_SIE
                 conn.Close();
             }
         }
-        
-        
+
+        // Método para verificar si ya existe una relación con los mismos valores de id_persona e id_coche
+        private static bool RelationShipExists(int id_coche, int id_persona)
+        {
+            string sqlQuery = "SELECT COUNT(*) FROM PERSONA_COCHE WHERE ID_PERSONA = @ID_PERSONA AND ID_COCHE = @ID_COCHE";
+            SqlConnection conn = GetConnection();
+            SqlCommand cmd = new SqlCommand(sqlQuery, conn);
+            cmd.Parameters.Add("@ID_PERSONA", System.Data.SqlDbType.Int).Value = id_persona;
+            cmd.Parameters.Add("@ID_COCHE", System.Data.SqlDbType.Int).Value = id_coche;
+
+            try
+            {
+                int count = (int)cmd.ExecuteScalar();
+                return count > 0; // Devuelve true si existe al menos una relación, false si no existe ninguna
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error al verificar la relación existente:\n" + ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false; // En caso de error, se asume que la relación no existe
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+
+
         public static int GetPersonaID(Persona pe, SqlConnection conn)
         {
             string query = "SELECT ID FROM PERSONA WHERE NOMBRE = @Nombre AND APELLIDO = @Apellido";
@@ -305,6 +338,7 @@ namespace Prueba_SIE
             }
             else
             {
+                return -1;
                 throw new InvalidOperationException("No se encontró la persona especificada en la base de datos.");
             }
         }
@@ -322,21 +356,64 @@ namespace Prueba_SIE
             }
             else
             {
+                return -1;
                 throw new InvalidOperationException("No se encontró el coche especificado en la base de datos.");
             }
         }
 
 
-        public static void DisplayTable(String query, DataGridView dataGridView)
+        public static void DisplayTable(String query, DataGridView dataGridView ,int? param = null)
         {
             string sql = query;
             SqlConnection conn = GetConnection();
             SqlCommand cmd = new SqlCommand(sql, conn);
+            if (param.HasValue) 
+            {
+                cmd.Parameters.Add("@ID", System.Data.SqlDbType.Int).Value = param.Value;
+            }
             SqlDataAdapter adp = new SqlDataAdapter(cmd);
             DataTable dataTable = new DataTable();
             adp.Fill(dataTable);
             dataGridView.DataSource = dataTable;
             conn.Close();
+        }
+
+        public static DataTable GetCochesByPersonaID(int idPersona)
+        {
+            string query = "SELECT COCHES.* FROM COCHES " +
+                           "INNER JOIN PERSONA_COCHE ON COCHES.ID = PERSONA_COCHE.ID_COCHE " +
+                           "WHERE PERSONA_COCHE.ID_PERSONA = @ID_PERSONA";
+
+            using (SqlConnection conn = GetConnection())
+            {
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@ID_PERSONA", idPersona);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable dataTable = new DataTable();
+                adapter.Fill(dataTable);
+
+                return dataTable;
+            }
+        }
+
+        public static DataTable GetPersonasByCocheId(int idCoche)
+        {
+            string query = "SELECT PERSONA.* FROM PERSONA " +
+                           "INNER JOIN PERSONA_COCHE ON PERSONA.ID = PERSONA_COCHE.ID_PERSONA " +
+                           "WHERE PERSONA_COCHE.ID_COCHE = @ID_COCHE";
+
+            using (SqlConnection conn = GetConnection())
+            {
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@ID_COCHE", idCoche);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable dataTable = new DataTable();
+                adapter.Fill(dataTable);
+
+                return dataTable;
+            }
         }
     }
 }
